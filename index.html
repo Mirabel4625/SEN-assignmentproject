@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Course Registration System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Course Registration System</h2>
+
+<form id="registrationForm">
+    <label>Student Name</label>
+    <input type="text" id="studentName" required>
+
+    <label>Matric Number</label>
+    <input type="text" id="matricNumber" required>
+
+    <label>Select Course</label>
+    <select id="course" required>
+        <option value="">-- Choose Course --</option>
+        <option value="CSC101">CSC101 - Introduction to Computing</option>
+        <option value="CSC202">CSC202 - Data Structures</option>
+        <option value="CSC305">CSC305 - Cyber Security</option>
+    </select>
+
+    <button type="submit">Register Course</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Matric Number</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody id="registrationTable">
+    </tbody>
+</table>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let name = document.getElementById("studentName").value;
+        let matric = document.getElementById("matricNumber").value;
+        let course = document.getElementById("course").value;
+
+        let table = document.getElementById("registrationTable");
+        let row = table.insertRow();
+
+        row.insertCell(0).innerText = name;
+        row.insertCell(1).innerText = matric;
+        row.insertCell(2).innerText = course;
+
+        document.getElementById("registrationForm").reset();
+    });
+</script>
+
+</body>
+</html>
