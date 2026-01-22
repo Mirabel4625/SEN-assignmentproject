@@ -1,2 +1,3 @@
 # SEN-assignmentproject
-student course registration system
+The Student Course Registration System is a simple web-based application designed to demonstrate the Software Engineering Development Life Cycle (SDLC). The system allows students to enter their name and matric number, select a course, and register successfully. Registered course details are displayed dynamically in a table for easy viewing.
+The project was developed using HTML for structure, internal CSS for styling, and JavaScript for functionality, making it lightweight and easy to understand. It follows standard SDLC phases including planning, requirements analysis, design, implementation, testing, deployment, and maintenance. This project is suitable for academic purposes and can be extended in the future to include backend integration, data storage, and enhanced security features.
